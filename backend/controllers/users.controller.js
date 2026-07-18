@@ -181,14 +181,20 @@ export const updateProfileData = async (req, res) => {
 
 export const getAllUsersProfiles = async (req, res) => {
     try {
+        const profiles = await Profile.find()
+            .populate("userId", "name email username ProfilePicture");
 
-        const profiles = await Profile.find().populate("userId", "name email username ProfilePicture");
-        return res.json(profiles);
+        const validProfiles = profiles.filter(profile => profile.userId);
+
+        return res.json(validProfiles);
 
     } catch (error) {
-        return res.status(500).json({message : "SOMETHING WENT WRONG" , error : error.message})
+        return res.status(500).json({
+            message: "SOMETHING WENT WRONG",
+            error: error.message
+        });
     }
-}
+};
 
 export const downloadProfile = async (req, res) => {
 

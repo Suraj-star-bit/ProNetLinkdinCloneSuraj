@@ -79,7 +79,14 @@ const isConnectionPending = connection?.status_accepted === null;
         setUserPost(filteredPosts);
     }, [postReducer.posts, profileUsername]);
 
-
+console.log("UPLOADS_BASE:", UPLOADS_BASE);
+console.log("Profile Picture:", profileData?.userId?.ProfilePicture);
+console.log(
+  "Final URL:",
+  profileData?.userId?.ProfilePicture
+    ? `${UPLOADS_BASE}/${profileData.userId.ProfilePicture}`
+    : `${UPLOADS_BASE}/default.jpg`
+);  
     
     return (
         <UserLayout>

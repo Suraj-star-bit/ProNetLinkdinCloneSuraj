@@ -17,8 +17,7 @@ export default function DiscoverPage() {
         }
     }, [])
     const router = useRouter();
-    const IMAGE_URL = "http://localhost:9050/uploads";
-
+    const IMAGE_BASE_URL = "https://pronetlinkdinclonesuraj-0d8f.onrender.com/uploads";
     return (
     <UserLayout>
 

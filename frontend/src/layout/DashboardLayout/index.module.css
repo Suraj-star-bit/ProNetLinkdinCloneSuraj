@@ -1,0 +1,106 @@
+.homeContainer {
+    display: flex;
+}
+
+/* LEFT SIDEBAR */
+.homeContainer__leftBar {
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    padding-left: 20px;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* FEED */
+.homeContainer__feedContainer {
+}
+
+/* RIGHT SECTION */
+.homeContainer__extraContainer {
+    padding: 0 8px;
+    border-left: 1px solid #e5e7eb;
+    padding-left:1.2rem;
+}
+
+.homeContainer__extraContainer h3 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #111827;
+}
+
+.extraContainer__Profile {
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+}
+
+.extraContainer__Profile p {
+    margin: 0;
+    color: #1f2937;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.homeContainer > div:nth-child(odd) {
+    flex: 0.2;
+}
+
+.homeContainer > div:nth-child(even) {
+    flex: 0.6;
+}
+
+.sideBarOption {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 80%;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.sideBarOption > svg {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px;
+    min-height: 24px;
+    flex-shrink: 0;
+}
+.sideBarOption:hover {
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* ===========================
+   MOBILE & TABLET
+=========================== */
+@media (max-width: 768px) {
+
+    .homeContainer {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Hide sidebars */
+    .homeContainer__leftBar,
+    .homeContainer__extraContainer {
+        display: none;
+    }
+
+    /* Feed takes full width */
+    .homeContainer__feedContainer {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+        margin: 0 auto;
+    }
+
+}

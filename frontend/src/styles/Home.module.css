@@ -1,0 +1,51 @@
+.container{
+    font-family: "Poppins";
+    padding: 1.2rem;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding-inline: 2rem;
+    height: 80vh;
+}
+
+.mainContainerLeft {
+    max-width: 400px;
+}
+
+.mainContainerLeft p:first-child {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.mainContainerRight {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainerRight img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.buttonJoin {
+    cursor: pointer;
+    background: #0070f3;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    text-align: center;
+    margin-top: 1rem;
+    display: inline-block;
+    white-space: nowrap;
+}

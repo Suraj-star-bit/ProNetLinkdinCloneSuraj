@@ -1,0 +1,52 @@
+POST http://localhost:9050/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "surajY2",
+    "password": "password1234",
+    "email": "suraj20@example.com",
+    "name": "Suraj Yamme"
+}
+
+###
+POST http://localhost:9050/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "suraj20@example.com",
+    "password": "password1234"
+}
+
+###
+GET http://localhost:9050/get_user_and_profile
+Content-Type: application/json
+Authorization: Bearer fa4197933e9c60f279c6e9cf2e590269
+
+###
+POST http://localhost:9050/update_profile_data
+Content-Type: application/json
+Authorization: Bearer fa4197933e9c60f279c6e9cf2e590269
+
+{
+    "token": "0fc3085f36b3a3cb1efff7009a1e19a5",
+    "bio": "Software Engineer with 5 years of experience in web development.",
+    "currentPost": "Senior Software Engineer at Tech Company",
+    "pastWork": [
+        {
+            "company": "Previous Company",
+            "position": "Software Engineer",
+            "duration": "2018-2020"
+        }
+    ],
+    "education": [
+        {
+            "institution": "University of Technology",
+            "degree": "Bachelor of Science in Computer Science",
+            "year": "2018"
+}
+    ]
+} 
+
+###
+GET http://localhost:9050/get_all_users_profiles
+Content-Type: application/json

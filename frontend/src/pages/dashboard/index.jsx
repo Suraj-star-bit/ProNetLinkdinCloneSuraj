@@ -13,8 +13,7 @@ import { resetPostId } from '@/config/redux/reducer/postReducer';
 // The backend serves uploaded files from `/uploads` (not under `/api`).
 // Ensure image URLs point to the server root uploads path.
 const UPLOADS_BASE = BASE_URL.replace('/api', '') + '/uploads';
-const IMAGE_BASE_URL = "http://localhost:9050";
-
+const IMAGE_BASE_URL = "https://pronetlinkdinclonesuraj-0d8f.onrender.com";
 
 const getProfileImage = (user) => {
   const profilePicture = user?.userId?.ProfilePicture || user?.ProfilePicture;
